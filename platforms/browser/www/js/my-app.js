@@ -19,5 +19,14 @@ var mainView = myApp.addView('.view-main', {
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
+
+    var notificationOpenedCallback = function(jsonData) {
+    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+  };
+
+  window.plugins.OneSignal
+    .startInit("934a3287-1eaa-4e59-a287-e50efb3a0b7a")
+    .handleNotificationOpened(notificationOpenedCallback)
+    .endInit();
 });
 
