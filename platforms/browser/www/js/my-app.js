@@ -25,7 +25,7 @@ $$(document).on('deviceready', function() {
   };
 
   window.plugins.OneSignal
-    .startInit("934a3287-1eaa-4e59-a287-e50efb3a0b7a")
+    .startInit("49d41240-3ac8-4b46-a225-32d0a60c5c29")
     .handleNotificationOpened(notificationOpenedCallback)
     .endInit();
 });
